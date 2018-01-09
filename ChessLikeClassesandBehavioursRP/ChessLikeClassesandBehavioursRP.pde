@@ -15,7 +15,7 @@ void setup() {
   cols = 8;
   gridSquareSize = 50;
 
-  grid = new GridSquare[cols][rows];
+  grid = new GridSquare[cols]rows];
   grid = new GridSquare[cols][rows];
 
 
@@ -39,10 +39,21 @@ void draw() {
     for (int j = 0; j < rows; j++) {
       grid[i][j].update();
       grid[i][j].render();
-      WSquare[i][j].update();
       BSquare[i][j].update();
     }
   }
+  
+  // example of modulo code
+  
+  boolean even;
+  
+  if(i%2 == 0) {
+    even = true;
+  }else{
+    even = false;
+  }
+      
+  
 
   // determine which grid slot mouse is over
     int currentHorizSquare = constrain(mouseX/gridSize, 0, 7);
