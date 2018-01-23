@@ -32,10 +32,6 @@ void setup () {
 
 void draw() {
 
-  // We changed the pixels in destination
-  destinationBrad.updatePixels();
-  // Display the destination
-  image(destinationBrad, 0, 0);
   for (int i=0; i<= veggiesIndex; i++) {
     // A for loop within a for loop which helps to know whether a Veggie interact with another Veggie
     for (int j=0; j<= veggiesIndex; j++) {
@@ -64,6 +60,10 @@ void draw() {
           }
         }
       }
+      // We changed the pixels in destination
+      destinationBrad.updatePixels();
+      // Display the destination
+      image(destinationBrad, 0, 0);
     }
     // Display and Update (color change : buggy) the Veggies
     veggiesImg[i].draw();

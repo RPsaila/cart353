@@ -42,7 +42,7 @@ class VeggieImg {
   void draw() {
     if (collideColorChange == true) {
       //If they collide veggies change to a random color
-      tint(random(0, 255));
+      tint(random(100, 255));
       //if they no longer collide veggies goes back to its original color
     } else {
       noTint();
